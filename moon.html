@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MOON FARM</title>
+    <link rel="stylesheet" text="text/css" href="css\moon.css">
+
+</head>
+
+<body>
+    <section>
+        <img src="imgmoon\bg.jpg" id="bg">
+        <img src="imgmoon\moon.png" id="moon">
+        <img src="imgmoon\mountain.png" id="mountain">
+        <img src="imgmoon\road.png" id="roadmoon">
+        <h2 id="text">MOON FARM</h2>
+    </section>
+
+    <section id="hov">
+        
+        <h3 class="itext"><a href="#">EXPLORE FARM ></a></h3>
+    </section>
+    <script type="text/javascript">
+    let bg = document.getElementById("bg");
+    let moon = document.getElementById("moon");
+    let mountain = document.getElementById("mountain");
+    let roadmoon = document.getElementById("roadmoon");
+    let text = document.getElementById("text");
+
+    window.addEventListener('scroll', function(){  
+        var value = window.scrollY;
+
+        bg.style.top = value * 0.5 + 'px';
+        moon.style.left = -value * 0.5 + 'px';
+        mountain.style.top = -value * 0.15 + 'px';
+        roadmoon.style.top = value * 0.15 + 'px';
+        text.style.top = value * 1 + 'px';
+        
+    })
+    </script>
+</body>
+</html>
